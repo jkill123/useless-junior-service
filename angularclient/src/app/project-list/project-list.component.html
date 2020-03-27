@@ -1,0 +1,28 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">DateFrom</th>
+        <th scope="col">DateTo</th>
+        <th scope="col">Type</th>
+        <th scope="col">Description</th>
+        <th scope="col">EmployeeList</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let projects of projects">
+        <td>{{ projects.id }}</td>
+        <td>{{ projects.title }}</td>
+        <td>{{ projects.dateFrom }}</td>
+        <td>{{ projects.dateTo }}</td>
+        <td>{{ projects.type }}</td>
+        <td>{{ projects.description }}</td>
+        <td>{{ projects.employeeList }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="employee.name"
+               class="form-control"
+               id="name"
+               name="name"
+               required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="surname">Surname</label>
+        <input type="text" [(ngModel)]="employee.surname"
+               class="form-control"
+               id="surname"
+               name="surname"
+               required #surname="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" [(ngModel)]="employee.description"
+               class="form-control"
+               id="description"
+               name="description"
+               required #description="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="position">Position</label>
+        <input type="text" [(ngModel)]="employee.position"
+               class="form-control"
+               id="position"
+               name="position"
+               required #position="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" [(ngModel)]="employee.age"
+               class="form-control"
+               id="age"
+               name="age"
+               required #age="ngModel">
+      </div>
+      <button type="submit" [disabled]="!userForm.form.valid"
+              class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

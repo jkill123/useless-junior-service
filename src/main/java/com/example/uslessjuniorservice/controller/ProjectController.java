@@ -28,6 +28,7 @@ public class ProjectController {
         projectService.saveNewProject(projectDto);
     }
 
+    @CrossOrigin("*")
     @GetMapping()
     public Optional<List<Project>> getAllProjects() {
         return projectService.getAllProjects();

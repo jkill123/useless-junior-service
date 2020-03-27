@@ -21,6 +21,7 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
 
+    @CrossOrigin("*")
     @GetMapping()
     public Optional<List<Employee>> getEmployees(){
         return employeeService.getEmployees();
@@ -31,6 +32,7 @@ public class EmployeeController {
         return employeeService.getEmployeeById(employeeId);
     }
 
+    @CrossOrigin("*")
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public void createNewEmployee(@RequestBody EmployeeDto employeeDto){
