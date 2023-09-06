@@ -29,7 +29,7 @@ public class EmployeeController {
 
     @GetMapping("/{employeeId}")
     public Optional<Employee> getEmployeeById(@PathVariable("employeeId") Integer employeeId){
-        // todo lol
+        // todo lolfefefefefefefe
         return employeeService.getEmployeeById(employeeId);
     }
 
@@ -37,6 +37,7 @@ public class EmployeeController {
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public void createNewEmployee(@RequestBody EmployeeDto employeeDto){
+        // todo egregrgrgr
         employeeService.saveNewEmployee(employeeDto);
     }
 
